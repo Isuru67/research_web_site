@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>RoboArm — Affordable Robotic Arm to Assist Paralysis with Emergency Detection</title>
+  <meta name="description" content="An affordable assistive robotic arm system designed to help paralyzed individuals regain independence, featuring gesture control, emotion detection, and smart health monitoring." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="logo-loader">
+      <div class="ring"></div>
+      <span>RoboArm · Initializing</span>
+    </div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Ambient background -->
+  <div class="bg-fx"></div>
+  <div class="grain"></div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ============================================================
+     DOCK NAV
+     ============================================================ -->
+  <nav class="dock-nav">
+    <a href="#home" class="dk-brand">
+      <span class="mk"><i class="fa-solid fa-robot"></i></span>
+      <span>RoboArm</span>
+    </a>
+    <div class="dk-items">
+      <a href="#home" class="dk-item active"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a href="#about" class="dk-item"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+      <a href="#components" class="dk-item"><i class="fa-solid fa-microchip"></i><span>Components</span></a>
+      <a href="#team" class="dk-item"><i class="fa-solid fa-users"></i><span>Team</span></a>
+      <button class="dk-menu-btn" data-popover="moreMenu" aria-label="More">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+    <a href="#contact" class="dk-cta">Contact Us</a>
+  </nav>
+
+  <div class="dk-popover" id="moreMenu">
+    <a href="#research"><i class="fa-solid fa-book-open"></i>Research</a>
+    <a href="#objectives"><i class="fa-solid fa-bullseye"></i>Objectives</a>
+    <a href="#methodology"><i class="fa-solid fa-flask"></i>Methodology</a>
+    <a href="#technology"><i class="fa-solid fa-microchip"></i>Technology</a>
+    <a href="#roadmap"><i class="fa-solid fa-road"></i>Roadmap</a>
+    <a href="#documents"><i class="fa-solid fa-folder-open"></i>Documents</a>
+    <a href="#team"><i class="fa-solid fa-users"></i>Team</a>
+  </div>
+
+  <!-- Mobile tabbar -->
+  <nav class="tabbar">
+    <div class="tabbar-inner">
+      <a href="#home" class="active"><i class="fa-solid fa-house"></i>Home</a>
+      <a href="#components"><i class="fa-solid fa-microchip"></i>System</a>
+      <a href="#technology"><i class="fa-solid fa-gears"></i>Tech</a>
+      <a href="#team"><i class="fa-solid fa-users"></i>Team</a>
+      <a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a>
+    </div>
+  </nav>
+
+  <!-- Tweaks Panel -->
+  <div class="tweaks-panel" id="tweaksPanel">
+    <h5><i class="fa-solid fa-sliders"></i>Tweak the design</h5>
+    <div class="tweaks-group">
+      <label>Accent color</label>
+      <div class="tweaks-swatches">
+        <button data-accent="cyan" class="on" style="background:#00d4ff" aria-label="Cyan"></button>
+        <button data-accent="violet" style="background:#7c3aed" aria-label="Violet"></button>
+        <button data-accent="orange" style="background:#f97316" aria-label="Orange"></button>
+        <button data-accent="green" style="background:#10b981" aria-label="Green"></button>
+      </div>
+    </div>
+    <div class="tweaks-group">
+      <label>Motion intensity</label>
+      <div class="tweaks-opts">
+        <button data-motion="low">Calm</button>
+        <button data-motion="med" class="on">Balanced</button>
+        <button data-motion="high">Lively</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     HERO
+     ============================================================ -->
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="badge-live reveal">
+          <span class="pulse"></span>
+          <span>Research Project · SLIIT</span>
+          <span class="divider-v"></span>
+          <span>Group 24-25J-115</span>
+        </div>
+
+        <h1 class="display reveal">
+          <span class="l">Affordable</span>
+          <span class="l"><em>Robotic Arm</em></span>
+          <span class="l">for Paralysis Care</span>
+        </h1>
+
+        <p class="lede-big reveal">
+          An AI-powered assistive robotic arm system helping paralyzed individuals regain independence — with gesture control, emotion detection, real-time emergency alerts, and smart health monitoring.
+        </p>
+
+        <div class="hero-ctas reveal">
+          <a href="#components" class="btn-x btn-primary-x">
+            <span class="bx-shine"></span>
+            <span class="bx-inner"><i class="fa-solid fa-robot"></i>Explore System <span class="arrow">→</span></span>
+          </a>
+          <a href="#documents" class="btn-x btn-ghost-x">
+            <span class="bx-inner"><i class="fa-solid fa-file-lines"></i>View Research</span>
+          </a>
+        </div>
+
+        <div class="live-stats reveal">
+          <div class="stat-x">
+            <div class="sx-top"><i class="fa-solid fa-users"></i><span class="n"><span data-count="4">0</span></span></div>
+            <div class="sx-lbl">Sub-components</div>
+          </div>
+          <div class="stat-x">
+            <div class="sx-top"><i class="fa-solid fa-microchip"></i><span class="n"><span data-count="6">0</span>+</span></div>
+            <div class="sx-lbl">AI models integrated</div>
+          </div>
+          <div class="stat-x">
+            <div class="sx-top"><i class="fa-solid fa-bolt"></i><span class="n">Real</span></div>
+            <div class="sx-lbl">-time detection</div>
+          </div>
+          <div class="stat-x">
+            <div class="sx-top"><i class="fa-solid fa-shield-heart"></i><span class="n">24</span></div>
+            <div class="sx-lbl">/7 caregiver alerts</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Robotic Arm Visual Stage -->
+      <div class="arm-stage reveal reveal-r">
+        <div class="arm-glow-ring"></div>
+        <div class="arm-glow-ring"></div>
+
+        <div class="arm-img-wrap">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop" alt="Robotic Arm" />
+          <div class="arm-img-overlay"></div>
+        </div>
+
+        <div class="data-chip dc-1">
+          <div class="dc-icon cyan"><i class="fa-solid fa-hand"></i></div>
+          <div class="dc-info"><strong>Gesture Control</strong><small>Smart Glove · Active</small></div>
+        </div>
+        <div class="data-chip dc-2">
+          <div class="dc-icon orange"><i class="fa-solid fa-eye"></i></div>
+          <div class="dc-info"><strong>Emotion Detected</strong><small>Happiness · 94% conf.</small></div>
+        </div>
+        <div class="data-chip dc-3">
+          <div class="dc-icon green"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="dc-info"><strong>Health Monitor</strong><small>Activity: Normal</small></div>
+        </div>
+        <div class="data-chip dc-4">
+          <div class="dc-icon violet"><i class="fa-solid fa-cookie"></i></div>
+          <div class="dc-info"><strong>Biscuit Detected</strong><small>YOLOv8 · Count: 3</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="mouse"></div>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span><i class="fa-solid fa-robot"></i>Assistive Robotics</span>
+      <span><i class="fa-solid fa-hand"></i>Gesture Recognition</span>
+      <span><i class="fa-solid fa-eye"></i>Emotion Detection</span>
+      <span><i class="fa-solid fa-heart-pulse"></i>Health Monitoring</span>
+      <span><i class="fa-solid fa-bell"></i>Emergency Alerts</span>
+      <span><i class="fa-solid fa-microchip"></i>Raspberry Pi 5</span>
+      <span><i class="fa-solid fa-brain"></i>YOLOv8</span>
+      <span><i class="fa-solid fa-hands"></i>MediaPipe</span>
+      <span><i class="fa-solid fa-shield-heart"></i>Paralysis Care</span>
+      <span><i class="fa-solid fa-gears"></i>Servo Motors</span>
+      <span><i class="fa-solid fa-microphone"></i>Voice Commands</span>
+      <span><i class="fa-solid fa-robot"></i>Assistive Robotics</span>
+      <span><i class="fa-solid fa-hand"></i>Gesture Recognition</span>
+      <span><i class="fa-solid fa-eye"></i>Emotion Detection</span>
+      <span><i class="fa-solid fa-heart-pulse"></i>Health Monitoring</span>
+      <span><i class="fa-solid fa-bell"></i>Emergency Alerts</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     ABOUT / PROBLEM
+     ============================================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About the Project</span>
+        <h2 class="title">Empowering paralyzed individuals with <span class="hl">intelligent robotics.</span></h2>
+        <p class="lede">Paralysis affects millions worldwide, stripping away independence for even the simplest daily tasks. Existing assistive devices are often expensive, fragile, or lack intelligence. We built something different.</p>
+      </div>
+
+      <div class="prob-grid">
+        <div class="prob-card reveal reveal-l">
+          <span class="badge"><i class="fa-solid fa-triangle-exclamation"></i>The Problem</span>
+          <h3>Independence lost to paralysis.</h3>
+          <p>Individuals with paralysis or severe motor impairment face immense challenges in performing basic daily activities such as eating, drinking, or communicating needs to caregivers. Current assistive devices are prohibitively expensive, lack real-time intelligence, and fail to adapt to patient behavior over time.</p>
+          <p>Emergency situations go undetected, caregiver response is slow, and patients' mental and physical health deteriorates without continuous monitoring. <strong>The gap between need and affordable, intelligent solution is vast.</strong></p>
+        </div>
+        <div class="prob-card solution reveal reveal-r">
+          <span class="badge"><i class="fa-solid fa-sparkles"></i>Our Solution</span>
+          <h3>An affordable, AI-powered assistive arm.</h3>
+          <p>Our system integrates four intelligent sub-components into a unified assistive robotic platform. A Raspberry Pi 5-powered arm uses YOLOv8 to detect and deliver snacks autonomously. A low-cost smart glove translates hand gestures into precise arm commands.</p>
+          <p>A camera-based module detects emotions, objects, and dangerous body movements, sending real-time emergency alerts to caregivers. A behavioral analytics engine predicts patient health trends — enabling proactive, compassionate care at a fraction of current costs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     RESEARCH / LITERATURE
+     ============================================================ -->
+  <section class="section section-alt" id="research">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Literature Review</span>
+        <h2 class="title">The research <span class="hl">foundation.</span></h2>
+        <p class="lede">A rigorous survey of assistive robotics, gesture recognition, emotion detection, and behavioral health monitoring systems that shaped our approach.</p>
+      </div>
+
+      <div class="lit-wrap">
+        <article class="lit-card reveal">
+          <div class="lit-head">
+            <span class="lit-num">01</span>
+            <h3 class="lit-title">Assistive Robotic Arms for Motor-Impaired Individuals</h3>
+          </div>
+          <p class="lit-body">Commercial assistive arms such as JACO [1] and Kinova Gen3 [2] demonstrate the viability of robotic feeding and manipulation for paralyzed users but remain prohibitively expensive (>$30,000). Research on shared-control robotics [3] shows promise in partially automating arm movements guided by user intent, yet relies on EEG or eye-tracking interfaces unavailable in low-resource settings. Studies on low-cost arms using servo motors and microcontrollers [4] achieve functional reach-and-grasp but lack AI-driven object detection and adaptive delivery. A YOLOv8-based pick-and-place study [5] demonstrated 91% object detection accuracy in cluttered environments, directly informing our biscuit-delivery module design.</p>
+          <details class="lit-refs">
+            <summary>References</summary>
+            <ol>
+              <li>Kinova Inc., "JACO Assistive Robotic Arm," [Online]. Available: https://www.kinovarobotics.com/product/jaco-arm.</li>
+              <li>Kinova Inc., "Gen3 Robotic Arm — Technical Specifications," [Online]. Available: https://www.kinovarobotics.com.</li>
+              <li>A. Herlant, R. Holladay and S. Srinivasa, "Assistive Teleoperation of Robot Arms via Automatic Time-Optimal Mode Switching," ACM/IEEE HRI, 2016, pp. 35–42.</li>
+              <li>P. Kumar and R. Sharma, "Low-Cost Servo-Based Robotic Arm for Assistive Applications," IEEE TENCON, 2022, pp. 88–93.</li>
+              <li>L. Zhang, Q. Li and H. Wu, "YOLOv8-Based Object Detection for Robotic Pick-and-Place in Assistive Contexts," Sensors, vol. 23, no. 11, 2023.</li>
+            </ol>
+          </details>
+        </article>
+
+        <article class="lit-card reveal">
+          <div class="lit-head">
+            <span class="lit-num">02</span>
+            <h3 class="lit-title">Gesture Recognition & Wearable Glove Controllers</h3>
+          </div>
+          <p class="lit-body">Flex-sensor gloves [6] and IMU-based gesture systems [7] have been widely explored for robotic control, achieving up to 96% gesture classification accuracy. However, most systems map gestures only to predefined coarse actions and lack auxiliary signal encoding for yes/no responses or emergency states. Soft glove designs [8] prioritize comfort but compromise sensor fidelity in clinical settings. Recent work on low-cost flex sensor arrays [9] combined with ML classifiers achieved real-time gesture inference at &lt;50ms latency on embedded hardware. Our smart glove innovates by incorporating emergency deactivation gestures and yes/no communication alongside standard arm control — a multi-signal approach not found in existing literature.</p>
+          <details class="lit-refs">
+            <summary>References</summary>
+            <ol>
+              <li>S. Sharma and A. Gupta, "Flex Sensor Based Gesture Recognition Glove for Robotic Control," IEEE ICIEV, 2021, pp. 1–6.</li>
+              <li>D. Kim, J. Park and Y. Lee, "IMU-Based Real-Time Hand Gesture Classification for HRI," Robotics and Autonomous Systems, vol. 148, 2022.</li>
+              <li>X. Liu et al., "Soft Wearable Glove for Dexterous Robotic Hand Teleoperation," Advanced Intelligent Systems, vol. 5, no. 3, 2023.</li>
+              <li>R. Fernando and K. Perera, "Low-Cost Flex Sensor Array for Embedded Gesture Inference," IEEE ICIIS, 2022, pp. 201–206.</li>
+            </ol>
+          </details>
+        </article>
+
+        <article class="lit-card reveal">
+          <div class="lit-head">
+            <span class="lit-num">03</span>
+            <h3 class="lit-title">Emotion Detection & Real-Time Emergency Alerting</h3>
+          </div>
+          <p class="lit-body">Facial emotion recognition using deep CNNs [10] achieves up to 97% accuracy on benchmarks such as FER-2013, but clinical deployment in real-time caregiving contexts is rare. Fall detection systems using pose estimation [11] and accelerometers [12] have been validated in elderly care settings with recall rates above 90%, yet rarely integrate body tremor analysis or multi-signal risk prioritization. Alert routing frameworks [13] for caregiver notification typically rely on simple threshold triggers. No existing system simultaneously detects emotion, object presence, body fall, and tremors while applying risk-level prioritization to trigger graduated caregiver alerts — the core novelty of our detection module.</p>
+          <details class="lit-refs">
+            <summary>References</summary>
+            <ol>
+              <li>S. Li, W. Deng and J. Du, "Reliable Crowdsourcing and Deep Locality-Preserving Learning for Expression Recognition," CVPR, 2017.</li>
+              <li>H. Chen, G. Bhanu and S. Bhanu, "Human Fall Detection Using 3D Multi-Stream CNN," IEEE Sensors Journal, vol. 20, no. 7, 2020.</li>
+              <li>M. Dubowsky et al., "Accelerometer-Based Fall Detection in Elderly Patients: A Systematic Review," Sensors, vol. 22, no. 5, 2022.</li>
+              <li>J. Park and S. Kim, "Priority-Based Alert Routing for Assisted Living Systems," IEEE IoT Journal, vol. 9, no. 12, 2022.</li>
+            </ol>
+          </details>
+        </article>
+
+        <article class="lit-card reveal">
+          <div class="lit-head">
+            <span class="lit-num">04</span>
+            <h3 class="lit-title">Behavioral Pattern Recognition for Predictive Health</h3>
+          </div>
+          <p class="lit-body">Long-term behavioral monitoring systems [14] using passive sensing have demonstrated the ability to predict cognitive decline and physical deterioration in older adults, with detection sensitivity of 82–89%. Interaction logging in assistive robotics [15] for usability analysis is well-established but rarely linked to health prediction models. Smart home activity recognition [16] using time-series neural networks achieves strong results for routine classification. However, integrating behavioral telemetry from a robotic feeding system specifically — tracking request frequency, hand effort, and consumption patterns — for predictive health modeling in paralysis care represents a novel contribution absent from current literature.</p>
+          <details class="lit-refs">
+            <summary>References</summary>
+            <ol>
+              <li>R. Rantz et al., "Using Sensor Networks and Machine Learning to Detect and Monitor Decline in Older Adults," Gerontechnology, vol. 14, no. 1, 2015.</li>
+              <li>L. Mataric, N. Eriksson and J. Feil-Seifer, "Socially Assistive Robotics for Post-Stroke Rehabilitation," Rehabilitation Robotics, 2007, pp. 241–256.</li>
+              <li>Y. Chen, K. Zheng and X. Liu, "LSTM-Based Activity Recognition from Wearable Sensors for Health Monitoring," IEEE JBHI, vol. 27, no. 4, 2023.</li>
+            </ol>
+          </details>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     RESEARCH GAPS
+     ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Research Gaps</span>
+        <h2 class="title">Four gaps, <span class="hl-orange">one integrated answer.</span></h2>
+      </div>
+      <div class="gap-grid">
+        <div class="gap-card reveal">
+          <div class="ico"><i class="fa-solid fa-dollar-sign"></i></div>
+          <h4>No Affordable Intelligent Assistive Arm</h4>
+          <p>Existing assistive robotic arms are high-cost commercial products without integrated AI object detection, limiting accessibility for most patients and care facilities.</p>
+        </div>
+        <div class="gap-card reveal">
+          <div class="ico"><i class="fa-solid fa-hand"></i></div>
+          <h4>Gesture Gloves Lack Multi-Signal Encoding</h4>
+          <p>Current glove controllers map gestures only to arm movements, with no provision for yes/no communication, emergency distress, or safety deactivation signals.</p>
+        </div>
+        <div class="gap-card reveal">
+          <div class="ico"><i class="fa-solid fa-bell"></i></div>
+          <h4>No Unified Emotion + Motion Emergency System</h4>
+          <p>Existing systems detect either emotion or falls independently. No solution combines emotion, body tremor, object detection, and risk-prioritized caregiver alerting in one pipeline.</p>
+        </div>
+        <div class="gap-card reveal">
+          <div class="ico"><i class="fa-solid fa-chart-line"></i></div>
+          <h4>Behavioral Data Not Used for Health Prediction</h4>
+          <p>Robotic system interaction logs are never used to infer patient health trends. Predictive health monitoring integrated into a feeding robot is entirely novel in the literature.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     OBJECTIVES
+     ============================================================ -->
+  <section class="section section-alt" id="objectives">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Objectives</span>
+        <h2 class="title">Four pillars of <span class="hl">assistive intelligence.</span></h2>
+        <p class="lede">Each sub-component of our system addresses a specific, critical need for paralysis care — from physical assistance to predictive health intelligence.</p>
+      </div>
+
+      <div class="obj-list">
+        <div class="obj-row reveal">
+          <div class="obj-num"><span>01</span></div>
+          <div class="obj-copy">
+            <h4>Autonomous Biscuit Detection & Delivery via Robotic Arm</h4>
+            <p>Design and implement an affordable Raspberry Pi 5-based robotic arm that uses YOLOv8 to detect biscuit availability and count, then autonomously picks and delivers a biscuit using servo motors. MediaPipe hand tracking and a VL53L0X proximity sensor ensure safe, precise release only when the user's hand is correctly positioned. Voice commands and mobile app integration provide flexible control.</p>
+          </div>
+        </div>
+        <div class="obj-row reveal">
+          <div class="obj-num"><span>02</span></div>
+          <div class="obj-copy">
+            <h4>Smart Glove for Intuitive Gesture-Based Arm Control</h4>
+            <p>Develop a low-cost wearable glove that converts raw sensor data from flex sensors into meaningful gesture inputs, mapping these gestures to arm actions including movement, picking, and safe deactivation. Extend the glove's communication capability to encode yes/no responses and emergency requests, enabling a multi-purpose human-robot communication interface for paralyzed users.</p>
+          </div>
+        </div>
+        <div class="obj-row reveal">
+          <div class="obj-num"><span>03</span></div>
+          <div class="obj-copy">
+            <h4>Real-Time Object, Emotion & Body Movement Detection with Emergency Alerts</h4>
+            <p>Build a camera-based detection pipeline that identifies objects (glasses, biscuits), recognizes emotional states (happiness, sadness, distress), and tracks body movements including falls and tremors to assess risk levels. Deliver risk-prioritized real-time alerts to caregivers during emergency events, enabling faster and more targeted care response.</p>
+          </div>
+        </div>
+        <div class="obj-row reveal">
+          <div class="obj-num"><span>04</span></div>
+          <div class="obj-copy">
+            <h4>Behavioral Pattern Recognition & Predictive Health Monitoring</h4>
+            <p>Monitor and analyze long-term patient interactions with the robotic system — including request frequency, consumption timing, hand effort, and daily routines. Apply behavioral analytics to predict patient health status: reduced activity signals potential decline while increased activity suggests recovery, enabling proactive caregiver intervention and improved patient outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     COMPONENT SHOWCASE (4 Sub-components)
+     ============================================================ -->
+  <section class="section" id="components">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">System Components</span>
+        <h2 class="title">Four intelligent <span class="hl">sub-systems.</span></h2>
+        <p class="lede">Each component is independently researched and developed by a dedicated team member, then integrated into a unified assistive platform.</p>
+      </div>
+
+      <div class="comp-grid">
+        <!-- Component 1: Robotic Arm -->
+        <div class="comp-card reveal">
+          <div class="comp-header">
+            <div class="comp-icon green"><i class="fa-solid fa-robot"></i></div>
+            <div class="comp-meta">
+              <div class="member-id">IT22588296 · Lakshan S.J.A.I.</div>
+              <h3>Assistive Robotic Arm System</h3>
+              <div class="researcher">Biscuit Detection & Autonomous Delivery</div>
+            </div>
+          </div>
+          <div class="comp-body">
+            <p>A Raspberry Pi 5-powered robotic arm equipped with a camera and YOLOv8 model to detect biscuit availability and count. Upon detection, servo motors autonomously pick and deliver a biscuit to the user. MediaPipe hand tracking combined with a VL53L0X proximity sensor ensures the biscuit is released only when the user's hand is correctly positioned — preventing drops and ensuring safety.</p>
+            <p>Voice commands trigger the system, with additional control via a connected mobile device for caregiver oversight.</p>
+            <div class="comp-novelty">
+              <strong>Novelty</strong>
+              First low-cost embedded robotic feeding system combining real-time YOLOv8 object detection with proximity-guided delivery and voice command triggering — making autonomous assistive feeding accessible beyond expensive commercial solutions.
+            </div>
+            <div class="comp-tags">
+              <span>Raspberry Pi 5</span><span>YOLOv8</span><span>Servo Motors</span><span>MediaPipe</span><span>VL53L0X</span><span>Voice Control</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Component 2: Smart Glove -->
+        <div class="comp-card reveal">
+          <div class="comp-header">
+            <div class="comp-icon cyan"><i class="fa-solid fa-hand"></i></div>
+            <div class="comp-meta">
+              <div class="member-id">IT22181206 · Rathnayake R.N.</div>
+              <h3>Smart Gesture Control Glove</h3>
+              <div class="researcher">Wearable Gesture-to-Command Interface</div>
+            </div>
+          </div>
+          <div class="comp-body">
+            <p>A wearable smart glove that converts raw flex sensor and IMU data into meaningful gesture inputs, mapping each gesture to specific robotic arm actions — moving the arm, picking items, or safely deactivating the system. Gesture classification runs in real-time on embedded hardware with sub-50ms latency, enabling fluid, intuitive control for users with limited motor function.</p>
+            <p>The glove sends commands wirelessly to the robotic arm and doubles as a communication interface, encoding yes/no responses and emergency distress signals.</p>
+            <div class="comp-novelty">
+              <strong>Novelty</strong>
+              A low-cost glove that goes beyond standard robotic control to encode multi-modal signals — arm commands, yes/no communication, and an emergency safety deactivation gesture — in a single wearable device.
+            </div>
+            <div class="comp-tags">
+              <span>Flex Sensors</span><span>IMU</span><span>Wireless Comms</span><span>Gesture ML</span><span>Safety Deactivation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Component 3: Emotion & Detection -->
+        <div class="comp-card reveal">
+          <div class="comp-header">
+            <div class="comp-icon orange"><i class="fa-solid fa-eye"></i></div>
+            <div class="comp-meta">
+              <div class="member-id">IT22570208 · Damhari P.A.M.T.</div>
+              <h3>Emotion & Emergency Detection</h3>
+              <div class="researcher">Vision-Based Detection & Alert System</div>
+            </div>
+          </div>
+          <div class="comp-body">
+            <p>A camera-based AI pipeline that simultaneously identifies objects (glasses, biscuits), recognizes emotional states (happiness, sadness, distress), and tracks body movements including falls and tremors to compute risk levels. The system applies a risk-prioritization engine that decides alert severity and routes notifications to caregivers in real time.</p>
+            <p>Multi-modal fusion enables the system to distinguish between routine activity and genuine emergency, reducing false alarms while accelerating true emergency response.</p>
+            <div class="comp-novelty">
+              <strong>Novelty</strong>
+              First system to simultaneously detect health-related body movements (falls, tremors), emotional states, and object context, then apply risk-level prioritization to trigger targeted, graduated emergency caregiver alerts.
+            </div>
+            <div class="comp-tags">
+              <span>Computer Vision</span><span>Emotion AI</span><span>Fall Detection</span><span>Tremor Analysis</span><span>Real-time Alerts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Component 4: Behavioral Pattern -->
+        <div class="comp-card reveal">
+          <div class="comp-header">
+            <div class="comp-icon violet"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="comp-meta">
+              <div class="member-id">IT22576798 · Weeraratna G.P.H.C.V.</div>
+              <h3>Behavioral Pattern Recognition</h3>
+              <div class="researcher">Predictive Health Monitoring Engine</div>
+            </div>
+          </div>
+          <div class="comp-body">
+            <p>A long-term behavioral analytics engine that monitors patient interactions with the robotic arm — tracking when and how water or snacks are requested, analyzing hand usage effort, and identifying daily habits such as regular consumption times. Time-series models process this telemetry to predict patient health status trends over time.</p>
+            <p>Reduced activity patterns signal potential health decline, while increased activity suggests recovery — enabling proactive caregiver intervention before deterioration becomes critical.</p>
+            <div class="comp-novelty">
+              <strong>Novelty</strong>
+              Integrating long-term behavioral telemetry from a robotic feeding system directly into a health prediction model for paralysis care — enabling proactive, data-driven caregiver support that no existing assistive device provides.
+            </div>
+            <div class="comp-tags">
+              <span>Behavioral Analytics</span><span>Time-Series ML</span><span>Health Prediction</span><span>Interaction Logging</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     METHODOLOGY
+     ============================================================ -->
+  <section class="section section-alt" id="methodology">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Methodology</span>
+        <h2 class="title">How we built <span class="hl">RoboArm.</span></h2>
+      </div>
+
+      <div class="method-grid">
+        <div class="robot-schematic reveal reveal-l">
+          <div class="rs-block rs-highlight"><i class="fa-solid fa-robot"></i>Robotic Arm (Raspberry Pi 5)</div>
+          <div class="rs-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+          <div class="rs-block"><i class="fa-solid fa-camera"></i>Camera + YOLOv8 Object Detection</div>
+          <div class="rs-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+          <div class="rs-block"><i class="fa-solid fa-hand"></i>MediaPipe Hand Tracking</div>
+          <div class="rs-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+          <div class="rs-block"><i class="fa-solid fa-ruler"></i>VL53L0X Proximity Sensor</div>
+          <div class="rs-arrow"><i class="fa-solid fa-arrows-left-right"></i></div>
+          <div class="rs-block"><i class="fa-solid fa-microphone"></i>Voice Commands + Mobile App</div>
+          <div class="rs-arrow"><i class="fa-solid fa-arrow-up"></i></div>
+          <div class="rs-block"><i class="fa-solid fa-gloves"></i>Smart Glove Controller</div>
+          <div class="rs-arrow"><i class="fa-solid fa-arrow-up"></i></div>
+          <div class="rs-block"><i class="fa-solid fa-bell"></i>Emergency Detection &amp; Alert Engine</div>
+        </div>
+
+        <div class="method-copy reveal reveal-r">
+          <p>Our methodology adopts an agile, modular development approach where each sub-component is designed, prototyped, and tested independently before system-level integration. Hardware prototyping uses low-cost components (Raspberry Pi 5, servo motors, flex sensors) to ensure affordability and replicability in resource-constrained care settings.</p>
+          <ul class="method-list">
+            <li>
+              <span class="mli-num">1</span>
+              <span class="mli-tx"><b>Robotic Arm Module</b> — Raspberry Pi 5 runs YOLOv8 inference on a camera feed for biscuit detection. Servo control logic handles pick-and-place, with MediaPipe and VL53L0X providing safe delivery confirmation before releasing.</span>
+            </li>
+            <li>
+              <span class="mli-num">2</span>
+              <span class="mli-tx"><b>Smart Glove Module</b> — Flex sensors and IMU output raw readings that are preprocessed and classified by an on-device ML model. Classified gestures are mapped to arm commands and additional signals (SOS, yes/no) transmitted wirelessly.</span>
+            </li>
+            <li>
+              <span class="mli-num">3</span>
+              <span class="mli-tx"><b>Detection & Alert Module</b> — A multi-model vision pipeline performs simultaneous emotion recognition, object detection, fall detection, and tremor analysis. Risk scores are computed and alert notifications are dispatched via mobile app or SMS to caregivers in real time.</span>
+            </li>
+            <li>
+              <span class="mli-num">4</span>
+              <span class="mli-tx"><b>Behavioral Analytics Module</b> — Interaction events are logged to a time-series database. Consumption patterns, request frequencies, and activity levels are analyzed using sequence models to generate health-trend predictions and caregiver dashboards.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     GALLERY
+     ============================================================ -->
+  <section class="section">
+    <div class="container-wide">
+      <div class="section-head reveal">
+        <span class="eyebrow">Project Visuals</span>
+        <h2 class="title">Intelligence you <span class="hl">can see.</span></h2>
+      </div>
+      <div class="gallery-wrap reveal">
+        <div class="gcard">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop" alt="Robot" />
+          <div class="g-cap"><div class="g-region">Robotic System</div><div class="g-name">Assistive Arm Platform</div></div>
+        </div>
+        <div class="gcard">
+          <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=800&auto=format&fit=crop" alt="AI" />
+          <div class="g-cap"><div class="g-region">Computer Vision</div><div class="g-name">Object Detection AI</div></div>
+        </div>
+        <div class="gcard">
+          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=800&auto=format&fit=crop" alt="Circuit" />
+          <div class="g-cap"><div class="g-region">Hardware</div><div class="g-name">Raspberry Pi Integration</div></div>
+        </div>
+        <div class="gcard">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Electronics" />
+          <div class="g-cap"><div class="g-region">Electronics</div><div class="g-name">Sensor Array</div></div>
+        </div>
+        <div class="gcard">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop" alt="AI Model" />
+          <div class="g-cap"><div class="g-region">Machine Learning</div><div class="g-name">Neural Network Inference</div></div>
+        </div>
+        <div class="gcard">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Analytics" />
+          <div class="g-cap"><div class="g-region">Health Analytics</div><div class="g-name">Behavioral Monitoring</div></div>
+        </div>
+        <div class="gcard">
+          <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=800&auto=format&fit=crop" alt="Wearable" />
+          <div class="g-cap"><div class="g-region">Wearable</div><div class="g-name">Smart Glove Prototype</div></div>
+        </div>
+        <div class="gcard">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" alt="Patient" />
+          <div class="g-cap"><div class="g-region">Care</div><div class="g-name">Patient Independence</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     TECHNOLOGY
+     ============================================================ -->
+  <section class="section section-alt" id="technology">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Technology Stack</span>
+        <h2 class="title">The intelligence behind <span class="hl">RoboArm.</span></h2>
+        <p class="lede">A carefully selected stack of edge AI, computer vision, and embedded systems technologies — chosen for performance, affordability, and real-world reliability.</p>
+      </div>
+
+      <div class="tech-orbit reveal">
+        <div class="to-ring to-r1"></div>
+        <div class="to-ring to-r2"></div>
+        <div class="to-center">RoboArm<br />Core</div>
+        <div class="tchip" style="top:50%;left:5%"><i class="fa-brands fa-python"></i>Python</div>
+        <div class="tchip" style="top:15%;left:22%"><i class="fa-solid fa-brain"></i>YOLOv8</div>
+        <div class="tchip" style="top:15%;left:72%"><i class="fa-solid fa-hands"></i>MediaPipe</div>
+        <div class="tchip" style="top:50%;left:92%"><i class="fa-solid fa-microchip"></i>Raspberry Pi</div>
+        <div class="tchip" style="top:82%;left:72%"><i class="fa-solid fa-fire"></i>TensorFlow</div>
+        <div class="tchip" style="top:82%;left:22%"><i class="fa-solid fa-eye"></i>OpenCV</div>
+        <div class="tchip" style="top:28%;left:50%"><i class="fa-solid fa-gears"></i>Servo Control</div>
+        <div class="tchip" style="top:72%;left:50%"><i class="fa-solid fa-bell"></i>Firebase</div>
+      </div>
+
+      <div class="tech-logo-grid reveal" style="margin-top: 48px;">
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/python.png" alt="Python" />
+          <span>Python</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/yologo.png" alt="YOLOv8" />
+          <span>YOLOv8</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/mediapipe.png" alt="MediaPipe" />
+          <span>MediaPipe</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/opencv.png" alt="OpenCV" />
+          <span>OpenCV</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/TensorFlow.png" alt="TensorFlow" />
+          <span>TensorFlow</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/PyTorch.png" alt="PyTorch" />
+          <span>PyTorch</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/NumPy.png" alt="NumPy" />
+          <span>NumPy</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/firebase.png" alt="Firebase" />
+          <span>Firebase</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/colab.png" alt="Colab" />
+          <span>Google Colab</span>
+        </div>
+        <div class="tech-logo-card">
+          <img src="assets/images/technolgies_logo/jupyter.png" alt="Jupyter" />
+          <span>Jupyter</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="fa-solid fa-microchip"></i>
+          <span>Raspberry Pi 5</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="fa-solid fa-ruler"></i>
+          <span>VL53L0X Sensor</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="fa-brands fa-figma"></i>
+          <span>Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     ROADMAP
+     ============================================================ -->
+  <section class="section" id="roadmap">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Project Roadmap</span>
+        <h2 class="title">The journey <span class="hl">ahead.</span></h2>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-date">Oct 2025 · Complete</div>
+            <h4>Project Proposal</h4>
+            <p>Initial concept for the affordable assistive robotic arm drafted, domain research completed, and project proposal approved by the review panel.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-date">Nov 2025 · Complete</div>
+            <h4>Design & Prototype</h4>
+            <p>Hardware architecture designed, component procurement completed, initial Figma wireframes validated, and first physical prototype assembled for testing.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-date">Jan 2026 · Complete</div>
+            <h4>Progress Presentation I</h4>
+            <p>50% milestone: robotic arm module and smart glove gesture recognition working end-to-end, demonstrated to supervisors and panel with live pick-and-place demo.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-date">Mar 2026 · Complete</div>
+            <h4>Research Paper</h4>
+            <p>Conference paper prepared and submitted detailing the novel multi-modal assistive robotic system architecture and experimental results.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-date">Mar 2026 · Complete</div>
+            <h4>Progress Presentation II</h4>
+            <p>90% completion: all four sub-components integrated and tested, emotion detection, behavioral analytics, and emergency alert system demonstrated with patient simulation.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-date">Apr 2026 · Complete</div>
+            <h4>Final Thesis</h4>
+            <p>Full final report submitted covering the complete system architecture, literature review, methodology, implementation, evaluation results, and future work.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-date">Apr 2026 · Complete</div>
+            <h4>Website Assessment</h4>
+            <p>Research website launched as a promotional and documentation platform, presenting all project components, team, research papers, and demonstration materials.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item pending">
+          <div class="tl-card">
+            <div class="tl-date">May 2026 · Upcoming</div>
+            <h4>Final Presentation & VIVA</h4>
+            <p>Full system demonstrated to the evaluation panel; individual and group viva completed with live robotic arm operation and Q&A on research contributions.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     DOCUMENTS
+     ============================================================ -->
+  <section class="section section-alt" id="documents">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Documents</span>
+        <h2 class="title">Read the <span class="hl">full research.</span></h2>
+      </div>
+
+      <div style="max-width:1080px;margin:0 auto 40px;">
+        <div class="doc-section-label">Research Papers &amp; Reports</div>
+        <div class="doc-grid">
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">PDF</span>
+            <div class="doc-ic"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="doc-t">Topic Assessment Form</div>
+          </a>
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">PDF</span>
+            <div class="doc-ic"><i class="fa-solid fa-book-open"></i></div>
+            <div class="doc-t">Project Proposal Report</div>
+          </a>
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">PDF</span>
+            <div class="doc-ic"><i class="fa-solid fa-trophy"></i></div>
+            <div class="doc-t">Final Report</div>
+          </a>
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">PDF</span>
+            <div class="doc-ic"><i class="fa-solid fa-newspaper"></i></div>
+            <div class="doc-t">Research Paper</div>
+          </a>
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">GIT</span>
+            <div class="doc-ic"><i class="fa-brands fa-github"></i></div>
+            <div class="doc-t">Source Code</div>
+          </a>
+        </div>
+      </div>
+
+      <div style="max-width:1080px;margin:0 auto;">
+        <div class="doc-section-label">Presentations</div>
+        <div class="doc-grid">
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">PPT</span>
+            <div class="doc-ic"><i class="fa-solid fa-display"></i></div>
+            <div class="doc-t">Proposal Presentation</div>
+          </a>
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">PPT</span>
+            <div class="doc-ic"><i class="fa-solid fa-display"></i></div>
+            <div class="doc-t">Progress Presentation 1</div>
+          </a>
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">PPT</span>
+            <div class="doc-ic"><i class="fa-solid fa-display"></i></div>
+            <div class="doc-t">Progress Presentation 2</div>
+          </a>
+          <a href="#" class="doc reveal" data-hover>
+            <span class="doc-tag">PPT</span>
+            <div class="doc-ic"><i class="fa-solid fa-display"></i></div>
+            <div class="doc-t">Final Presentation</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     TEAM
+     ============================================================ -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">The Team</span>
+        <h2 class="title">The minds behind <span class="hl-orange">RoboArm.</span></h2>
+        <p class="lede">A dedicated multidisciplinary team of researchers, engineers, and AI specialists from SLIIT, supervised by experienced faculty.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Supervisor -->
+        <div class="mate reveal">
+          <div class="mate-photo">
+            <img src="assets/images/team_images/image.png" alt="Supervisor" />
+          </div>
+          <div class="mate-body">
+            <span class="role">Supervisor</span>
+            <h4>Prof. Sanvitha Kasthuriarachchi</h4>
+            <p class="affil">Associate Professor · SLIIT</p>
+            <div class="mate-social">
+              <a href="https://www.linkedin.com/in/sanvitha-kasthuriarachchi-31b50a37/"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="mailto:sanvitha.k@sliit.lk"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Co-Supervisor -->
+        <div class="mate reveal">
+          <div class="mate-photo">
+            <img src="assets/images/team_images/Co.jpg" alt="Co-Supervisor" />
+          </div>
+          <div class="mate-body">
+            <span class="role">Co-Supervisor</span>
+            <h4>Dr. Kapila Dissanayaka</h4>
+            <p class="affil">Senior Lecturer · SLIIT</p>
+            <div class="mate-social">
+              <a href="https://www.sliit.lk/academic/academic-staff/kapila.d"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="mailto:kapila.d@sliit.lk"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 1: Lakshan -->
+        <div class="mate reveal">
+          <div class="mate-photo">
+            <img src="assets/images/team_images/Leader.jpeg" alt="Lakshan" />
+          </div>
+          <div class="mate-body">
+            <span class="role">Team Member · IT22588296</span>
+            <h4>Lakshan S.J.A.I.</h4>
+            <p class="affil">Sri Lanka Institute of Information Technology</p>
+            <p class="focus">Robotic arm system · YOLOv8 object detection · Servo control · MediaPipe hand tracking</p>
+            <div class="mate-social">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2: Rathnayake -->
+        <div class="mate reveal">
+          <div class="mate-photo">
+            <img src="assets/images/team_images/Malaka.jpeg" alt="Rathnayake" />
+          </div>
+          <div class="mate-body">
+            <span class="role">Team Member · IT22181206</span>
+            <h4>Rathnayake R.N.</h4>
+            <p class="affil">Sri Lanka Institute of Information Technology</p>
+            <p class="focus">Smart glove design · Gesture recognition · Wireless arm control · Emergency signal encoding</p>
+            <div class="mate-social">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3: Damhari -->
+        <div class="mate reveal">
+          <div class="mate-photo">
+            <img src="assets/images/team_images/dewni1.jpeg" alt="Damhari" />
+          </div>
+          <div class="mate-body">
+            <span class="role">Team Member · IT22570208</span>
+            <h4>Damhari P.A.M.T.</h4>
+            <p class="affil">Sri Lanka Institute of Information Technology</p>
+            <p class="focus">Emotion detection · Fall & tremor detection · Risk prioritization · Real-time caregiver alerts</p>
+            <div class="mate-social">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 4: Weeraratna -->
+        <div class="mate reveal">
+          <div class="mate-photo">
+            <img src="assets/images/team_images/Shadini.jpeg" alt="Weeraratna" />
+          </div>
+          <div class="mate-body">
+            <span class="role">Team Member · IT22576798</span>
+            <h4>Weeraratna G.P.H.C.V.</h4>
+            <p class="affil">Sri Lanka Institute of Information Technology</p>
+            <p class="focus">Behavioral pattern recognition · Interaction analytics · Predictive health monitoring · Caregiver dashboard</p>
+            <div class="mate-social">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     CONTACT
+     ============================================================ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 class="title">Interested in our <span class="hl">research?</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card accent reveal reveal-l">
+          <h4>Reach the RoboArm team.</h4>
+          <p>For research collaboration, questions about our system, or partnership opportunities, reach out to us directly.</p>
+          <ul class="contact-info">
+            <li><i class="fa-solid fa-location-dot"></i>SLIIT, New Kandy Road, Malabe, Sri Lanka</li>
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:roboarm@sliit.lk">roboarm@sliit.lk</a></li>
+            <li><i class="fa-solid fa-tag"></i>Research Group 24-25J-115</li>
+            <li><i class="fa-solid fa-clock"></i>Mon–Fri · 09:00–17:00 IST</li>
+          </ul>
+          <div class="footer-social" style="margin-top:24px;">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-card contact-form reveal reveal-r" id="contactForm">
+          <h4>Drop us a message</h4>
+          <div class="field"><input type="text" required placeholder="Your name" /></div>
+          <div class="field"><input type="email" required placeholder="Email address" /></div>
+          <div class="field"><input type="text" placeholder="Subject" /></div>
+          <div class="field"><textarea rows="4" placeholder="Your message or inquiry"></textarea></div>
+          <button type="submit" class="btn btn-primary">Send message <span class="arrow">→</span></button>
+          <div class="form-note" id="formNote"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand"><span class="brand-mark"><i class="fa-solid fa-robot"></i></span>RoboArm</div>
+          <p class="f-about">An affordable AI-powered assistive robotic arm system designed to restore independence to paralyzed individuals through intelligent automation and real-time care.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Project</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#documents">Documents</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <p><i class="fa-solid fa-location-dot"></i>SLIIT · Malabe · Sri Lanka</p>
+          <p><i class="fa-solid fa-envelope"></i>roboarm@sliit.lk</p>
+          <p><i class="fa-solid fa-tag"></i>Group 24-25J-115</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 RoboArm Project · SLIIT Research Initiative</span>
+        <span>Built with <i class="fa-solid fa-heart" style="color:var(--c-cyan)"></i> for assistive care</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#home" class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></a>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
