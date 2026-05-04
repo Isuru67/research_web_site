@@ -985,10 +985,10 @@
 
         <form class="contact-card contact-form reveal reveal-r" id="contactForm">
           <h4>Drop us a message</h4>
-          <div class="field"><input type="text" required placeholder="Your name" /></div>
-          <div class="field"><input type="email" required placeholder="Email address" /></div>
-          <div class="field"><input type="text" placeholder="Subject" /></div>
-          <div class="field"><textarea rows="4" placeholder="Your message or inquiry"></textarea></div>
+          <div class="field"><input type="text" name="user_name" required placeholder="Your name" /></div>
+          <div class="field"><input type="email" name="user_email" required placeholder="Email address" /></div>
+          <div class="field"><input type="text" name="subject" placeholder="Subject" /></div>
+          <div class="field"><textarea rows="4" name="message" placeholder="Your message or inquiry"></textarea></div>
           <button type="submit" class="btn btn-primary">Send message <span class="arrow">→</span></button>
           <div class="form-note" id="formNote"></div>
         </form>
@@ -1046,6 +1046,14 @@
   <!-- Back to top -->
   <a href="#home" class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></a>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "ZpjXVOzxP8a13UTVj",
+      });
+    })();
+  </script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
