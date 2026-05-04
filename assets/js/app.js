@@ -155,10 +155,28 @@
   if (form && note) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      note.textContent = '✓ Message sent! We\'ll get back to you soon.';
-      note.style.color = 'var(--c-green)';
-      form.reset();
-      setTimeout(() => { note.textContent = ''; }, 4000);
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending...';
+      submitBtn.disabled = true;
+
+      emailjs.sendForm('service_c821jjo', 'template_4uhk0ue', form)
+        .then(() => {
+          note.textContent = '✓ Message sent! We\'ll get back to you soon.';
+          note.style.color = 'var(--c-green)';
+          form.reset();
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+          setTimeout(() => { note.textContent = ''; }, 4000);
+        }, (error) => {
+          note.textContent = '✗ Failed to send message. Please try again.';
+          note.style.color = 'red';
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+          console.error('EmailJS Error:', error);
+          setTimeout(() => { note.textContent = ''; }, 4000);
+        });
     });
   }
 
