@@ -610,8 +610,13 @@ body::before {
 /* ---------- TEAM ---------- */
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
 
+.team-grid:first-of-type {
+  justify-content: center;
+}
+
 .mate {
-  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-xl);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   overflow: hidden; transition: border-color .25s, box-shadow .25s, transform .25s;
 }
 .mate:hover { border-color: var(--border-2); box-shadow: var(--shadow-glow); transform: translateY(-4px); }
